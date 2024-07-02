@@ -1,0 +1,50 @@
+.top {
+  color: white;
+  background-color: dodgerblue;
+  cursor: pointer;
+}
+
+.discountcoupon {
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 30%;
+  transform: rotate(-10deg); /* 이미지를 10도 회전시킴 */
+  margin: 10px 0;
+}
+
+.top .info {
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.top p {
+  align-self: center;
+  opacity: 0.9;
+  margin: 0 5px;
+}
+
+.top span {
+  font-weight: bold;
+  align-self: center;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  align-self: center;
+}
+
+.cancel {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 반응형 구현 */
+@media screen and (max-width: 767px) {
+  .top {
+    display: none;
+  }
+}
