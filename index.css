@@ -2,6 +2,7 @@
   color: white;
   background-color: dodgerblue;
   cursor: pointer;
+  position: relative;
 }
 
 .discountcoupon {
@@ -40,6 +41,8 @@ svg {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  left: 395px;
 }
 
 /* 반응형 구현 */
