@@ -11,13 +11,22 @@
       rel="icon"
       href="./img/icons8-home-48.png"
     />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
     <!-- reset css 설정, css,js 파일 연결 -->
     <link
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="icons.css" />
     <link rel="stylesheet" href="index.css" />
     <script defer src="index.js"></script>
+    <script defer src="navbar.js"></script>
   </head>
 
   <body>
@@ -26,9 +35,9 @@
       <a href="javascript:void(0)">
         <div class="info">
           <img
-            class="discountcoupon"
+            class="discountCoupon"
             src="./img/discountcoupon.png"
-            alt="discountcoupon"
+            alt="discounCoupon"
           />
           <p>첫 구매라면 누구나 최대</p>
           <span>2만원 할인 !</span>
@@ -57,6 +66,197 @@
       </a>
     </div>
 
-    <!--  -->
+    <!-- header -->
+    <header>
+      <div class="headerContainer">
+        
+
+        <div class="headerLeft">
+          <div class="headerLogo">
+            <a href="javascript:void(0)">
+              <img src="./img/ohouseLogo.svg" alt="오늘의집 로고" />
+            </a>
+          </div>
+          <div class="headerCategory">
+            <div class="community">
+              <a href="javascript:void(0)">커뮤니티</a>
+            </div>
+            <div class="shopping">
+              <a href="javascript:void(0)">쇼핑</a>
+            </div>
+            <div class="interior">
+              <a href="javascript:void(0)">인테리어/생활</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="headerCenter">
+          <div class="inputBox">
+            <span class="icon _search_24"></span>
+            <input type="text" placeholder="통합검색" class="searchInput" />
+          </div>
+          <a class="shoppingCart" href="javascript:void(0)">
+            <span class="_cart_24 icon"></span>
+          </a>
+          <div class="headerRight">
+            <div class="account">
+              <a class="signIn" href="javascript:void(0)">로그인</a>
+              <a class="signUp" href="javascript:void(0)">회원가입</a>
+            </div>
+            <button class="writeButton" type="button" role="button">
+              <span>글쓰기</span>
+              <img
+                class="downArrowWhite"
+                src="./img/downArrowWhite.svg"
+                alt="downArrowWhite"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="headerContainer-mobile">
+        <button class="menuButton" type="button">
+          <img class="menu" src="./img/menu.svg" alt="menu" />
+        </button>
+
+        <div class="headerLeft-mobile">
+          <a href="javascript:void(0)">
+            <img src="./img/ohouseLogo.svg" alt="오늘의집 로고" />
+          </a>
+        </div>
+
+        <div class="headerRight-mobile">
+          <div class="searchContainer">
+            <a href="javascript:void(0)">
+              <img
+                class="search-mobile"
+                src="./img/search.svg"
+                alt="shoppingCart"
+              />
+            </a>
+          </div>
+          <div class="cartContainer">
+            <a href="javascript:void(0)">
+              <img
+                class="shoppingCart-mobile"
+                src="./img/shoppingCart.svg"
+                alt="shoppingCart"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="layoutNavigationContainer">
+        <div class="layoutNavigation">
+          <div class="layoutNavigationLeft">
+            <nav>
+              <span>
+                <div>
+                  <a class="home" href="javascript:void(0)">홈</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="recomandation" href="javascript:void(0)"><p>추천</p></a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="channel" href="javascript:void(0)"><p>#채널</p></a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="houseParty" href="javascript:void(0)">집들이</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="housePicture" href="javascript:void(0)">집사진</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="3dinterior" href="javascript:void(0)">3D인테리어</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="homeDeco" href="javascript:void(0)">살림수납</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="collectable" href="javascript:void(0)">콜렉터블</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="kitchenItem" href="javascript:void(0)">홈스토랑</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="hotPlace" href="javascript:void(0)">핫플레이스</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="babySitting" href="javascript:void(0)">육아</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="plantarior" href="javascript:void(0)">플랜테리어</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="pet" href="javascript:void(0)">반려동물</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="camping" href="javascript:void(0)">캠핑</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="hobby" href="javascript:void(0)">취미</a>
+                </div>
+              </span>
+              <span>
+                <div>
+                  <a class="event" href="javascript:void(0)">이벤트</a>
+                </div>
+              </span>
+              <button>
+                <img
+                class="downArrowGreySmall"
+                src="./img/downArrowGrey.svg"
+                alt="downArrowGrey"
+              />
+              </button>
+            </nav>
+          </div>
+
+          <div class="navigationRight">
+            <div class="ranking">
+              <div class="rankingContent">
+
+              </div>
+              <button type="button">
+                <img
+                class="downArrowGreyBig"
+                src="./img/downArrowGrey.svg"
+                alt="downArrowGrey"
+              />
+              </button>
+            </div>
+          </div>
+        </div>
+    </header>
   </body>
 </html>
