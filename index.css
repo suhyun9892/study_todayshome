@@ -1,3 +1,7 @@
+html {
+  letter-spacing: -0.3px;
+}
+
 .topBanner {
   color: white;
   background-color: #1496f4;
@@ -52,14 +56,20 @@ svg {
   transform: translateY(50%); /* 수직 중앙 정렬 */
 }
 
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #eaedef;
+}
+
 .headerContainer {
   padding: 0 60px;
   display: flex;
   align-items: center;
   height: 80px;
   justify-content: space-between;
-  background-color: #fff;
-  border-bottom: 1px solid #eaedef;
+
+  position: relative;
+  box-sizing: border-box;
 }
 .headerLeft {
   display: flex;
@@ -75,6 +85,10 @@ svg {
 .headerCategory {
   display: flex;
   flex: 1 1 0px;
+}
+
+.community {
+  color: #35c5f0;
 }
 
 .community,
@@ -95,6 +109,9 @@ svg {
 
 .headerCenter {
   align-items: center;
+  /* flex: 0 1 650px; */
+  justify-content: end;
+  line-height: 0;
 }
 
 .inputBox {
@@ -104,13 +121,14 @@ svg {
   box-sizing: border-box;
   height: 40px;
   padding: 0 14px;
-  width: 100%;
   align-items: center;
+  margin-right: 9px;
 }
 
 .inputBox:hover {
   border: 1px solid rgb(53, 197, 240);
   background-color: #f7f9fa;
+  cursor: text;
 }
 
 .searchInput {
@@ -120,6 +138,10 @@ svg {
 
 .searchInput:hover {
   background-color: #f7f9fa;
+}
+
+.searchInput:focus {
+  outline: none;
 }
 
 .icon ._search_24 {
@@ -202,21 +224,38 @@ svg {
   height: 24px;
 }
 
-.layoutNavigationContainer {
+/* layout */
+
+.layout {
   background: #ffffff;
   border-bottom: 1px solid #eaedef;
-  display: flex;
+}
+
+.layoutNavigationContainer {
   padding: 0 60px;
-  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
+  overflow: initial;
 }
 
 .layoutNavigationContainer nav {
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  white-space: nowrap;
-  margin: 0 -5px;
-  height: 51px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px 6px;
+  height: inherit;
+  outline: none;
 }
 
 .layoutNavigationContainer span {
@@ -225,10 +264,9 @@ svg {
   display: block;
 }
 
-.layoutNavigationContainer div {
-  height: inherit;
-  display: flex;
-  align-items: center;
+.layoutNavigationContainer .home {
+  color: #35c5f0;
+  border-bottom: 2px solid #35c5f0;
 }
 
 .layoutNavigationContainer a {
@@ -240,11 +278,15 @@ svg {
   padding: 12px 6px;
   height: inherit;
   outline: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  align-items: center;
 }
 
-.layoutNavigationContainer a div {
-  padding: 4px;
-  margin: -4px;
+.layoutNavigationContainer a:hover {
+  color: #35c5f0;
 }
 
 .layoutNavigationContainer button {
@@ -252,11 +294,67 @@ svg {
   border: none;
 }
 
-.layoutNavigationContainer .downArrowGreySmall {
-  height: 18px;
+.layoutNavigation {
+  display: flex;
 }
-.layoutNavigationContainer .downArrowGreyBig {
-  height: 24px;
+
+._chevron_down_12 {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  color: rgb(47, 52, 56);
+  z-index: 2;
+}
+
+._chevron_down_18 {
+  display: flex;
+  align-items: center;
+  display: block;
+  color: #828c94;
+  font-size: 18px;
+  flex: 0 0 auto;
+}
+
+/* .navigationButton {
+  margin: 0px;
+  border: none;
+  background: none;
+  font: inherit;
+  padding: 0px 6px;
+  height: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-100%);
+} */
+
+/* .navigationButton::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 50%
+  );
+} */
+
+.navigationLeft {
+  display: flex;
+  flex: 1 0 0;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.navigationLeft div {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1 0 0;
 }
 
 .navigationRight {
@@ -265,7 +363,6 @@ svg {
 }
 
 .rankingContent {
-  display: flex;
   position: relative;
   margin-right: 6px;
   overflow: hidden;
@@ -276,7 +373,26 @@ svg {
 }
 
 /* 반응형 구현 */
+
+@media (min-width: 1256px) {
+  .headerContainer {
+    max-width: 1256px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .layoutNavigationContainer {
+    max-width: 1256px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+}
 @media screen and (max-width: 767px) {
+  body,
+  html {
+    font-size: 15px;
+  }
+
   .topBanner {
     display: none;
   }
@@ -316,8 +432,8 @@ svg {
     height: 24px;
   }
 
-  .searchContainer,
-  .cartContainer {
+  ._search_24,
+  ._cart_24 {
     padding: 6px;
     margin: 3px 1px;
   }
